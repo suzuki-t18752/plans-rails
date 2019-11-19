@@ -1,0 +1,48 @@
+<div class="topbox">
+  <div class="topbox1">
+    <% if logged_in? %>
+      <h3>予定一覧</h3>
+      <%= form_with(scope: :search, url: root_path, method: :get, local: true) do |f| %>
+        <%= f.text_field :title, value: @search_params[:title] %>
+        <%= f.date_field :startday_from, value: @search_params[:startday_from] %> ~ <%= f.date_field :startday_to, value: @search_params[:startday_to] %>
+        <%= f.date_field :endday_from, value: @search_params[:endday_from] %> ~ <%= f.date_field :endday, value: @search_params[:endday_to] %>
+        <%= f.submit '検索' %>
+      <% end %>
+    <% else %>
+      <p class="toptitle">Welcome to the Plans</p>
+      <p>
+        <%= link_to 'ユーザーを作成し利用する', signup_path, class: 'topbtn' %>
+        <%= link_to 'ログイン', login_path, class: 'topbtn' %>
+      </p>
+    <% end %>
+  </div>
+  <div class="topbox2">
+    <% if logged_in? %>
+      <%= render 'plans/plan_style', message: @plan %>
+    <% else %>
+      <p>
+        いろいろな予定を確認してみよう<br>
+        見逃していたイベント等があるかも？？<br>
+        そして貴方も自分の予定を管理しよう
+      </p>
+      <div class="topbox4">
+        <div>
+          並び替え:
+          <%= sortable "title", "タイトル順" %>-
+          <%= sortable "startday", "予定開始日時順" %>-
+          <%= sortable "endday", "予定終了日時順" %>
+        </div>
+          
+        <% @plans.each do |plan| %>
+          <p>
+            <span><%= plan.title %></span><br>
+            <span><%= plan.startday.strftime("%Y年%m月%d日 %H時%M分") %>　～</span>
+            <span><%= plan.endday.strftime("%Y年%m月%d日 %H時%M分") %></span>
+          </p>
+        <% end %>
+      </div>
+    <% end %>
+  <%= paginate @plans %>
+  </div>
+  
+</div>

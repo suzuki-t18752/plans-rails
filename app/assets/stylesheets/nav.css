@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8%;
+    background-color: gray;
+}
+
+.logo > h4 > a {
+    color: white;
+}
+
+.logo {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+
+.burgerhidden > li {
+    list-style: none;
+}
+
+.burgerhidden {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.navbtn {
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+}
+
+.navlabel {
+    display: none;
+    cursor: pointer;
+}
+
+.burger > div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+.navinput {
+    display: none;
+}
+
+.usermenu {
+    cursor: pointer;
+}
+.usermenu > ul {
+    display: block;
+    background-color: black;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0) translateY(-200%);
+}
+
+.usermenu > ul > li {
+    margin: 10px;
+}
+
+.usermenu:hover >ul {
+    transform: scale(1) translateY(0%);
+}
+
+
+
+@media (max-width: 768px){
+    body {
+        overflow-x: hidden;
+    }
+    
+    .burgerhidden {
+        position: absolute;
+        right: 0px;
+        height: 70%;
+        top: 8%;
+        background-color: gray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    
+    .navinput:checked + .burgerhidden {
+        transform: translateX(0%);
+        transition: transform 0.5s ease-in;
+    }
+    .navlabel{
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+<div class="topbox1">
+  <p>Keep済み予定</p>
+</div>
+
+<div class="topbox4">
+  <% @keeps.each do |plan| %>
+    <%= link_to plan_path(plan.plan) do %>
+      <p>
+        <span><%= plan.plan.title %></span><br>
+        <span><%= plan.plan.startday.strftime("%Y年%m月%d日 %H時%M分") %>　～</span>
+        <span><%= plan.plan.endday.strftime("%Y年%m月%d日 %H時%M分") %></span><br>
+        <span>投稿者:<%= plan.plan.user.name %></span>
+      </p>
+    <% end %>
+  <% end %>
+</div>

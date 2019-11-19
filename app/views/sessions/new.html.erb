@@ -1,0 +1,9 @@
+<%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+<div class="formbox">
+  <h2>ログイン</h2>
+  <%= f.text_field :name, class: 'userform', placeholder:"name" %>
+  <%= f.password_field :password, class: 'userform', placeholder:"password" %>
+  <%= f.submit 'ログイン', class: 'formbtn' %>
+  <%= link_to '新規ユーザーですか？', signup_path %>
+</div>
+<% end %>

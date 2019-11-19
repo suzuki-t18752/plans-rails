@@ -1,0 +1,10 @@
+<%= form_with(model: @user, local: true) do |f| %>
+<%= render 'layouts/error_messages', model: f.object %>
+<div class="formbox">
+  <h2>ユーザー作成</h2>
+  <%= f.text_field :name, class: 'userform', placeholder:"name" %>
+  <%= f.password_field :password, class: 'userform', placeholder:"password" %>
+  <%= f.password_field :password_confirmation, class: 'userform', placeholder:"password again" %>
+  <%= f.submit 'ユーザー作成', class: 'formbtn' %>
+</div>
+<% end %>

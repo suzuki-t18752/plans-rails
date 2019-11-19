@@ -1,0 +1,32 @@
+<nav>
+  <div class="logo">
+    <h4><a href="/" class="navtitle">Plans</a></h4>
+  </div>
+    <input type="checkbox" id="toggle" class="navinput">
+    <ul class="burgerhidden">
+      <% if logged_in? %>
+        <li><%= link_to "新規投稿", new_plan_path, class: "navbtn" %></li>
+        <li><%= link_to "ユーザー一覧", users_path, class: "navbtn" %></li>
+        <li class="usermenu">
+          <a class="navbtn">ユーザーメニュー</a>
+          <ul class="">
+            <li><%= link_to "マイプラン", user_path(current_user), class: "navbtn" %></li>
+            <li><%= link_to "KEEP", keeps_user_path(current_user), class: "navbtn" %></li>
+            <li><%= link_to 'ログアウト', logout_path, method: :delete, class: "navbtn" %></li>
+            <li><%= link_to 'ユーザー編集', edit_user_path(current_user), class: "navbtn" %></li>
+            <li><%= link_to '退会', user_path(current_user), method: :delete, class: "navbtn" %></li>
+          </ul>
+        </li>
+      <% else %>
+        <li><%= link_to '新規ユーザー作成', signup_path, class: 'navbtn' %></li>
+        <li><%= link_to 'ログイン', login_path, class: 'navbtn' %></li>
+      <% end %>
+    </ul>
+    <label class="navlabel" for="toggle">
+      <div class="burger">
+        <div class="burger1"></div>
+        <div class="burger2"></div>
+        <div class="burger3"></div>
+      </div>
+    </label>
+</nav>

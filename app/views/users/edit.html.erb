@@ -1,0 +1,36 @@
+<div class="">
+  <p>プロフィール編集</p>
+</div>
+
+<div class="">
+  <div class="">
+
+    <%= form_with(model: @user, local: true) do |f| %>
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      
+      <div class="">
+        <%= f.label :name, 'ユーザー名' %>
+        <%= f.text_field :name, class: '' %>
+      </div>
+
+      <div class="">
+        <%= f.label :password, 'パスワード' %>
+        <%= f.password_field :password, class: '' %>
+      </div>
+
+      <div class="">
+        <%= f.label :password_confirmation, 'パスワード確認' %>
+        <%= f.password_field :password_confirmation, class: '' %>
+      </div>
+      <%= f.submit '変更', class: '' %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,115 @@
+.topbox1 {
+    width: 100%;
+    text-align: center;
+}
+
+.topbox1 > h3 {
+    margin-top: 50px;
+}
+
+.toptitle {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.topbox2 {
+    margin-top: 100px;
+}
+
+.topbox2 > p {
+    text-align: center;
+}
+
+.topbox3 {
+    margin: 0 5% 0 5%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    word-break: break-all;
+}
+
+.topbox3 > div {
+    font-weight: bold;
+    padding: 5px;
+    border: solid 1px;
+}
+
+.topbox3 > span {
+    padding: 5px;
+    border: dashed 1px;
+}
+
+.topbox4 > div {
+    text-align: center;
+}
+
+.topbox4 > p{
+    word-break: break-all;
+    margin: 10px 20%;
+    padding: 10px;
+    background-color: lightsteelblue;
+    border-radius: 10px;
+    border: groove;
+}
+
+.topbox4 > a {
+    display: block;
+    margin: 10px 20%;
+}
+
+.topbox4 > p > span {
+    margin: 0 10px 0 10px;
+}
+
+.topbox4 > a > p {
+    word-break: break-all;
+    padding: 10px;
+    background-color: lightsteelblue;
+    border-radius: 10px;
+    border: groove;
+    transition-duration: 0.5s;
+}
+
+.topbox4 > a > p:hover{
+    transform: scale(1.1);
+}
+
+
+.topbox4 > a > p > span {
+    margin: 0 10px 0 10px;
+}
+
+@media (max-width: 768px){
+    .topbox4 > p > span {
+        display: block;
+    }
+    
+    .topbox4 > p > br {
+        display: none;
+    } 
+    
+    .topbox4 > a > p > span {
+        display: block;
+    }
+    
+    .topbox4 > a > p > br {
+        display: none;
+    } 
+}
+
+.topbtn {
+  display: inline-block;
+  font-weight: bold;
+  padding: 3px;
+  text-decoration: none;
+  border-left: solid 4px #668ad8;
+  border-right: solid 4px #668ad8;
+  color: #668ad8;
+  background: #e1f3ff;
+  transition: .4s;
+}
+
+.topbtn:hover {
+  background: #668ad8;
+  color: #FFF;
+}
