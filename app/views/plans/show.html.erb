@@ -1,27 +1,32 @@
-<p>
-  詳細　投稿者:
-  <%= link_to @plan.user do %>
-    <%= @plan.user.name %>
-  <% end %>
-</p>
-
-<h3><%= @plan.title %></h3>
-
-<p><%= @plan.startday.strftime("%Y年%m月%d日 %H時%M分") %>~<%= @plan.endday.strftime("%Y年%m月%d日 %H時%M分") %></p>
-
-<p><%= @plan.content %></p>
-
-<p><%= @plan.diary %></p>
-
-<%= link_to '一覧に戻る', root_path %>
-<% if logged_in? %>
-  <% if @plan.kept_by?(current_user) %>
-        <%=link_to 'Keep解除', plan_keeps_path(@plan), method: :delete, class: '' %>
-  <% else %>
-      <%=link_to 'Keep', plan_keeps_path(@plan), method: :post, class: '' %>
-  <% end %>
-<% end %>
-<% if current_user == @plan.user %>
-    <%= link_to '予定の編集', edit_plan_path(@plan) %>
-    <%= link_to '予定を削除する', @plan, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
-<% end %>
+<div class="plantextbox">
+  <h2 class="planbox1"><%= @plan.title %></h2>
+  <span class="planbox2">
+    投稿者:
+    <%= link_to @plan.user do %>
+      <%= @plan.user.name %>
+    <% end %>
+  </span>
+  <div class="planbox3">
+    <%= @plan.startday.strftime("%Y年%m月%d日 %H時%M分") %>~<%= @plan.endday.strftime("%Y年%m月%d日 %H時%M分") %>
+  </div>
+  <div class="planbox4">
+    予定内容:<%= content_tag :div,@plan.content %>
+  </div>
+  <div class="planbox5">
+    日記:<%= content_tag :div,@plan.diary %>
+  </div>
+  <div>
+    <%= link_to '一覧に戻る', root_path, class: 'linkbtn' %>
+    <% if logged_in? %>
+      <% if @plan.kept_by?(current_user) %>
+            <%=link_to 'Keep解除', plan_keeps_path(@plan), method: :delete, class: 'unlinkbtn' %>
+      <% else %>
+          <%=link_to 'Keep', plan_keeps_path(@plan), method: :post, class: 'linkbtn' %>
+      <% end %>
+    <% end %>
+    <% if current_user == @plan.user %>
+        <%= link_to '予定の編集', edit_plan_path(@plan), class: 'linkbtn' %>
+        <%= link_to '予定を削除する', @plan, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'unlinkbtn' %>
+    <% end %>
+  </div>
+</div>

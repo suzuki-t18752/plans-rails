@@ -1,6 +1,6 @@
 <nav>
   <div class="logo">
-    <h4><a href="/" class="navtitle">Plans</a></h4>
+    <h2><a href="/" class="navtitle">Plans</a></h2>
   </div>
     <input type="checkbox" id="toggle" class="navinput">
     <ul class="burgerhidden">
@@ -8,13 +8,16 @@
         <li><%= link_to "新規投稿", new_plan_path, class: "navbtn" %></li>
         <li><%= link_to "ユーザー一覧", users_path, class: "navbtn" %></li>
         <li class="usermenu">
-          <a class="navbtn">ユーザーメニュー</a>
+          <label class="usermenulabel" for="change">
+            <div class="navbtn">ユーザーメニュー</div>
+          </label>
+          <input type="checkbox" id="change" class="usermenuinput">
           <ul class="">
             <li><%= link_to "マイプラン", user_path(current_user), class: "navbtn" %></li>
             <li><%= link_to "KEEP", keeps_user_path(current_user), class: "navbtn" %></li>
             <li><%= link_to 'ログアウト', logout_path, method: :delete, class: "navbtn" %></li>
             <li><%= link_to 'ユーザー編集', edit_user_path(current_user), class: "navbtn" %></li>
-            <li><%= link_to '退会', user_path(current_user), method: :delete, class: "navbtn" %></li>
+            <li><%= link_to '退会', user_path(current_user), method: :delete, data: { confirm: '本当に削除してよろしいですか？'}, class: "navbtn" %></li>
           </ul>
         </li>
       <% else %>

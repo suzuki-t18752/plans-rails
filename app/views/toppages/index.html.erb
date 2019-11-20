@@ -1,15 +1,26 @@
 <div class="topbox">
   <div class="topbox1">
     <% if logged_in? %>
-      <h3>予定一覧</h3>
       <%= form_with(scope: :search, url: root_path, method: :get, local: true) do |f| %>
-        <%= f.text_field :title, value: @search_params[:title] %>
-        <%= f.date_field :startday_from, value: @search_params[:startday_from] %> ~ <%= f.date_field :startday_to, value: @search_params[:startday_to] %>
-        <%= f.date_field :endday_from, value: @search_params[:endday_from] %> ~ <%= f.date_field :endday, value: @search_params[:endday_to] %>
-        <%= f.submit '検索' %>
-      <% end %>
+        <div class="planbox">
+          <div class="planformbox">
+            <p>タイトル</p>
+            <%= f.text_field :title, value: @search_params[:title], class: "planform" %>
+          </div>
+          <div class="planformbox">
+            <p>予定開始日</p>
+            <%= f.date_field :startday_from, value: @search_params[:startday_from], class: "dayform" %> ~ <%= f.date_field :startday_to, value: @search_params[:startday_to], class: "dayform" %>
+          </div>
+          <div class="planformbox">
+            <p>予定終了</p>
+            <%= f.date_field :endday_from, value: @search_params[:endday_from], class: "dayform" %> ~ <%= f.date_field :endday, value: @search_params[:endday_to], class: "dayform" %>
+          </div>
+          <%= f.submit '検索', class: "planbtn" %>
+        </div>
+        <% end %>
+      <h3>予定一覧</h3>
     <% else %>
-      <p class="toptitle">Welcome to the Plans</p>
+      <h1 class="toptitle">Welcome to the Plans</h1>
       <p>
         <%= link_to 'ユーザーを作成し利用する', signup_path, class: 'topbtn' %>
         <%= link_to 'ログイン', login_path, class: 'topbtn' %>

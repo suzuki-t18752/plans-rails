@@ -1,10 +1,11 @@
 .formbox {
-    position: absolute;
     text-align: center;
     background-color: slategray;
     color: white;
     justify-content: center;
     margin: 80px 25% 0 25%;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 50%;
 }
 
@@ -51,4 +52,17 @@
 
 .formbtn:hover {
     background-color: mediumspringgreen;
+}
+
+.userlist {
+    margin: 50px 20% 0 20%;
+    width: 60%;
+}
+
+.userprofile {
+    border-bottom: 2px solid;
+}
+
+.userlist > form > p {
+    background-color: slategray;
 }

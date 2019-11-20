@@ -1,10 +1,12 @@
-<%= form_tag users_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "検索", :name => nil %>
-  </p>
-<% end %>
-<% @users.each do |user| %>
-  <p><%= user.name %>:<%= link_to 'このユーザーの予定を見る', user_path(user) %></p>
-<% end %>
-<%= paginate @users %>
+<div class="userlist">
+  <%= form_tag users_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search, params[:search], class: "planform", placeholder:"ユーザー名" %>
+      <%= submit_tag "検索", :name => nil, class: "planbtn" %>
+    </p>
+  <% end %>
+  <% @users.each do |user| %>
+    <p class="userprofile"><%= user.name %>:<%= link_to 'このユーザーの予定を見る', user_path(user) %></p>
+  <% end %>
+  <%= paginate @users %>
+</div>

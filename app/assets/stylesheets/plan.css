@@ -1,0 +1,108 @@
+.planbox {
+    margin: 50px 15% 0 15%;
+    padding: 20px;
+    width: 70%;
+    text-align: left;
+    justify-content: center;
+    background-color: slategray;
+    color: aliceblue;
+}
+
+.planbox > h3 {
+    margin-top: 0;
+}
+
+.planformbox > p {
+    margin: 0;
+}
+
+.planformbox {
+    margin-top: 10px;
+    display: block;
+}
+
+.planlabel {
+    display: block;
+    height: 25px;
+    margin-bottom: 0;
+}
+
+.planform {
+    width: 80%;
+    border: 2px solid lightskyblue;
+}
+
+.planform:focus {
+    border: 3px solid salmon;
+}
+
+.dayform {
+    border: 2px solid lightskyblue;
+}
+
+.dayform:focus {
+    border: 3px solid salmon;
+}
+
+textarea {
+    height: 100px;
+}
+
+.planbtn {
+    cursor: pointer;
+    background: none;
+    margin: 20px auto;
+    padding: 5px;
+    width: 100px;
+    color: white;
+    border: 2px solid lightskyblue;
+}
+
+.planbtn:hover {
+    background-color: mediumspringgreen;
+}
+
+.plantextbox {
+    width: 70%;
+    margin: 50px 15% 0 15%;
+    padding: 10px;
+    border: 2px solid steelblue;
+}
+
+.plantextbox > h2 {
+    margin: 0;
+    display: inline-block;
+}
+
+.linkbtn {
+    cursor: pointer;
+    background: white;
+    margin: 20px auto;
+    padding: 5px;
+    width: 100px;
+    border: 2px solid lightskyblue;
+}
+
+.linkbtn:hover {
+    color: white;
+    background-color: lightskyblue;
+}
+
+.unlinkbtn {
+    cursor: pointer;
+    background: white;
+    margin: 20px auto;
+    padding: 5px;
+    width: 100px;
+    border: 2px solid salmon;
+}
+
+.unlinkbtn:hover {
+    color: white;
+    background-color: salmon;
+}
+
+.planbox3,.planbox4,.planbox5 {
+    border-bottom: 2px solid steelblue;
+    margin-bottom: 5px;
+}

@@ -1,11 +1,22 @@
 <div class="topbox1">
-  <p><%= @user.name %>の予定一覧</p>
   <%= form_with(scope: :search, url: user_path(@user), method: :get, local: true) do |f| %>
-      <%= f.text_field :title, value: @search_params[:title] %>
-      <%= f.date_field :startday_from, value: @search_params[:startday_from] %> ~ <%= f.date_field :startday_to, value: @search_params[:startday_to] %>
-      <%= f.date_field :endday_from, value: @search_params[:endday_from] %> ~ <%= f.date_field :endday, value: @search_params[:endday_to] %>
-      <%= f.submit '検索' %>
+  <div class="planbox">
+    <div class="planformbox">
+      <p>タイトル</p>
+      <%= f.text_field :title, value: @search_params[:title], class: "planform" %>
+    </div>
+    <div class="planformbox">
+      <p>予定開始日</p>
+      <%= f.date_field :startday_from, value: @search_params[:startday_from], class: "dayform" %> ~ <%= f.date_field :startday_to, value: @search_params[:startday_to], class: "dayform" %>
+    </div>
+    <div class="planformbox">
+      <p>予定終了</p>
+      <%= f.date_field :endday_from, value: @search_params[:endday_from], class: "dayform" %> ~ <%= f.date_field :endday, value: @search_params[:endday_to], class: "dayform" %>
+    </div>
+    <%= f.submit '検索', class: "planbtn" %>
+  </div>
   <% end %>
+  <p><%= @user.name %>の予定一覧</p>
 </div>
 
 <%= render 'plans/plan_style', message: @plan %>

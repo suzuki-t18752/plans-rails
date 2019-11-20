@@ -1,5 +1,7 @@
-<h1>編集</h1>
-
-<%= render 'form', message: @plan %>
-
-<%= link_to '戻る', plan_path(@plan) %>
+<div class="planbox">
+  <h3>編集</h3>
+  
+  <%= render 'form', message: @plan %>
+  
+  <%= link_to '戻る', plan_path(@plan), class: 'linkbtn' %>
+</div>

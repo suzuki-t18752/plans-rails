@@ -1,3 +1,16 @@
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size:1.6rem;/* 16px*/
+  line-height: 2;
+}
+@media (min-width: 1200px) {
+}
+@media screen and (max-width: 640px) {
+}
+
+
 body {
     margin: 0;
 }
@@ -14,14 +27,13 @@ nav {
     background-color: gray;
 }
 
-.logo > h4 > a {
+.logo > h2 > a {
     color: white;
 }
 
 .logo {
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 20px;
 }
 
 
@@ -38,7 +50,6 @@ nav {
 .navbtn {
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 14px;
     color: white;
 }
 
@@ -58,8 +69,9 @@ nav {
     display: none;
 }
 
-.usermenu {
+.usermenulabel {
     cursor: pointer;
+    display: block;
 }
 .usermenu > ul {
     display: block;
@@ -76,13 +88,17 @@ nav {
     margin: 10px;
 }
 
-.usermenu:hover >ul {
+.usermenuinput:checked + ul {
     transform: scale(1) translateY(0%);
+}
+
+.usermenuinput {
+    display: none;
 }
 
 
 
-@media (max-width: 768px){
+@media (max-width: 1024px){
     body {
         overflow-x: hidden;
     }

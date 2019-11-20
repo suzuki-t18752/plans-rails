@@ -8,13 +8,12 @@
 }
 
 .toptitle {
-    font-size: 48px;
     font-weight: bold;
     margin-bottom: 0;
 }
 
 .topbox2 {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .topbox2 > p {

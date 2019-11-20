@@ -1,5 +1,7 @@
-<h1>予定作成</h1>
-
-<%= render 'form', message: @plan %>
-
-<%= link_to '一覧に戻る', root_path %>
+<div class="planbox">
+  <h3>予定作成</h3>
+  
+  <%= render 'form', message: @plan %>
+  
+  <%= link_to '一覧に戻る', root_path, class: 'linkbtn' %>
+</div>
