@@ -113,13 +113,13 @@ nav {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
+        transform: scale(0) translateX(200%);
+        transition: transform 0.3s ease-in;
     }
     
     .navinput:checked + .burgerhidden {
-        transform: translateX(0%);
-        transition: transform 0.5s ease-in;
+        transform: scale(1) translateX(0%);
+        transition: transform 0.3s ease-in;
     }
     .navlabel{
         display: block;
