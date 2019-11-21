@@ -67,6 +67,7 @@ textarea {
     margin: 50px 15% 0 15%;
     padding: 10px;
     border: 2px solid steelblue;
+    word-break: break-all;
 }
 
 .plantextbox > h2 {
@@ -108,7 +109,30 @@ textarea {
 }
 
 @media (max-width: 1024px) {
+   .planbtn {
+        padding: 5px;
+        width: 100px;
+        display: block;
+        width: 80%;
+    } 
+    .linkbtn {
+        margin: 20px auto;
+        padding: 5px;
+        width: 100px;
+        display: block;
+        width: 80%;
+    }
+    .unlinkbtn {
+        margin: 20px auto;
+        padding: 5px;
+        width: 100px;
+        display: block;
+        width: 80%;
+    }
     
+    .planbox3 > span {
+        display: block;
+    }
 }
 @media (max-width: 768px) {
     

@@ -98,7 +98,7 @@ nav {
         position: absolute;
         right: 0px;
         height: 70%;
-        top: 10%;
+        top: 15%;
         background-color: gray;
         display: flex;
         flex-direction: column;
@@ -126,13 +126,13 @@ body{
 }
 @media (max-width: 1024px) {
     body {
-        font-size: 2.4rem;
+        font-size: 3.2rem;
     }
     input {
-        font-size: 2.4rem;
+        font-size: 3.2rem;
     }
     select {
-        font-size: 2.4rem;
+        font-size: 3.2rem;
     }
 }
 @media (max-width: 768px) {

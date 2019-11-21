@@ -78,7 +78,7 @@
     margin: 0 10px 0 10px;
 }
 
-@media (max-width: 768px){
+@media (max-width: 1024px){
     .topbox4 > p > span {
         display: block;
     }
@@ -90,7 +90,6 @@
     .topbox4 > a > p > span {
         display: block;
     }
-    
     .topbox4 > a > p > br {
         display: none;
     } 
