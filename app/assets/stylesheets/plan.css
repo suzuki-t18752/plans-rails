@@ -82,6 +82,7 @@ textarea {
     padding: 5px;
     width: 100px;
     border: 2px solid lightskyblue;
+    text-align: center;
 }
 
 .linkbtn:hover {
@@ -96,6 +97,7 @@ textarea {
     padding: 5px;
     width: 100px;
     border: 2px solid salmon;
+    text-align: center;
 }
 
 .unlinkbtn:hover {

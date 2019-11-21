@@ -89,8 +89,8 @@ nav {
         overflow-x: hidden;
     }
     
-    .nav {
-        height: 10%;
+    nav {
+        height: 200px;
     }
     
     .burgerhidden {
@@ -98,7 +98,7 @@ nav {
         position: absolute;
         right: 0px;
         height: 70%;
-        top: 15%;
+        top: 200px;
         background-color: gray;
         display: flex;
         flex-direction: column;
