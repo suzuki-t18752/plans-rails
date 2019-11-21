@@ -62,7 +62,7 @@ nav {
 .usermenu > ul {
     display: block;
     background-color: black;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-    padding: 0;
+    padding: 10px;
     text-align: center;
     list-style: none;
     position: absolute;
@@ -132,6 +132,9 @@ body{
         font-size: 3.2rem;
     }
     select {
+        font-size: 3.2rem;
+    }
+    textarea {
         font-size: 3.2rem;
     }
 }
