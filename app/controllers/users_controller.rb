@@ -53,7 +53,7 @@ class UsersController < ApplicationController
   
   def keeps
     @user = User.find(params[:id])
-    @keeps = @user.keeps.order(startday: :asc).page(params[:page]).per(30).search(params[:search])
+    @keeps = @user.keeps.order(id: :desc).page(params[:page]).per(30).search(params[:search])
   end
   
   
