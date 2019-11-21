@@ -1,9 +1,9 @@
 <div class="topbox4">
     <div>
-      並び替え:
-      <%= sortable "title", "タイトル順" %>-
-      <%= sortable "startday", "予定開始日時順" %>-
-      <%= sortable "endday", "予定終了日時順" %>
+      <span>並び替え:</span>
+      <span><%= sortable "title", "タイトル順" %>-</span>
+      <span><%= sortable "startday", "予定開始日時順" %>-</span>
+      <span><%= sortable "endday", "予定終了日時順" %></span>
     </div>
       
     <% @plans.each do |plan| %>

@@ -93,6 +93,20 @@
     .topbox4 > a > p > br {
         display: none;
     } 
+    .topbox4 > p{
+        margin: 10px 20%;
+        padding: 10px;
+    }
+    
+    .topbox4 > a {
+        margin: 10px 10px;
+    }
+    .topbox4 > p{
+        margin: 10px 10px;
+    }
+    .topbox4 > div >span {
+        display: block;
+    }
 }
 
 .topbtn {
