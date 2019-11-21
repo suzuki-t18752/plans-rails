@@ -66,3 +66,28 @@
 .userlist > form > p {
     background-color: slategray;
 }
+
+@media (max-width: 1024px) {
+   .formbox {
+        margin: 80px 5% 0 5%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 90%;
+    }
+    
+    .userform {
+        margin: 20px auto;
+        padding: 10px;
+        border-radius: 20px;
+        width: 60%;
+        transition: 0.25s;
+    }
+    
+    .userform:focus {
+        width: 70%;
+        border:2px solid mediumspringgreen;
+    } 
+}
+@media (max-width: 768px) {
+    
+}

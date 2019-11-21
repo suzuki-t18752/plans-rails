@@ -16,6 +16,7 @@
     margin: 0;
 }
 
+
 .planformbox {
     margin-top: 10px;
     display: block;
@@ -23,7 +24,6 @@
 
 .planlabel {
     display: block;
-    height: 25px;
     margin-bottom: 0;
 }
 
@@ -105,4 +105,11 @@ textarea {
 .planbox3,.planbox4,.planbox5 {
     border-bottom: 2px solid steelblue;
     margin-bottom: 5px;
+}
+
+@media (max-width: 1024px) {
+    
+}
+@media (max-width: 768px) {
+    
 }
