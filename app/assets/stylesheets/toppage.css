@@ -12,11 +12,16 @@
     margin-bottom: 0;
 }
 
+.topintroduction {
+    line-height: 1.3em;
+}
+
 .topbox2 {
     margin-top: 50px;
 }
 
 .topbox2 > p {
+    line-height: 1.3em;
     text-align: center;
 }
 
@@ -49,6 +54,7 @@
     background-color: lightsteelblue;
     border-radius: 10px;
     border: groove;
+    line-height: 1.3em
 }
 
 .topbox4 > a {
@@ -66,11 +72,11 @@
     background-color: lightsteelblue;
     border-radius: 10px;
     border: groove;
-    transition-duration: 0.5s;
+    line-height: 1.3em
 }
 
 .topbox4 > a > p:hover{
-    transform: scale(1.1);
+    border-color: mediumspringgreen;
 }
 
 
@@ -85,7 +91,7 @@
     
     .topbox4 > p > br {
         display: none;
-    } 
+    }
     
     .topbox4 > a > p > span {
         display: block;

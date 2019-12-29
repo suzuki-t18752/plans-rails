@@ -18,8 +18,5 @@
   <% end %>
   <p><%= @user.name %>の予定一覧</p>
 </div>
-
 <%= render 'plans/plan_style', message: @plan %>
-
 <%= paginate @plans %>
-

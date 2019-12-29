@@ -10,7 +10,9 @@
     <%= stylesheet_link_tag "toppage", :media => "all" %>
     <%= stylesheet_link_tag "user", :media => "all" %>
     <%= stylesheet_link_tag "plan", :media => "all" %>
+    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
   </head>
 
   <body>
@@ -18,9 +20,21 @@
     
     <div class="main">
       <%= render 'layouts/flash_messages' %>
-      
       <%= yield %>
     </div>
   </body>
+  <footer>
+     <a href="#">Top</a>
+  </footer>
 </html>
+
+<script type="text/javascript">
+  // var app = new Vue({
+  //   methods: {
+  //     document.onscroll = (e) => {
+  //       this.position = document.documentElement.scrollTop || document.body.scrollTop;
+  //     } 
+  //   }
+  // });
+</script>
 

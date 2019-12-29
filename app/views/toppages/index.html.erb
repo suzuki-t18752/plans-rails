@@ -20,7 +20,12 @@
         <% end %>
       <h3>予定一覧</h3>
     <% else %>
-      <h1 class="toptitle">Welcome to the Plans</h1>
+      <h1 class="toptitle">welcome to the plans</h1>
+      <p class="topintroduction">
+        いろいろな予定を確認してみよう<br>
+        見逃していたイベント等があるかも？？<br>
+        そして貴方も自分の予定を管理しよう
+      </p>
       <p>
         <%= link_to 'ユーザーを作成し利用する', signup_path, class: 'topbtn' %>
         <%= link_to 'ログイン', login_path, class: 'topbtn' %>
@@ -31,11 +36,6 @@
     <% if logged_in? %>
       <%= render 'plans/plan_style', message: @plan %>
     <% else %>
-      <p>
-        いろいろな予定を確認してみよう<br>
-        見逃していたイベント等があるかも？？<br>
-        そして貴方も自分の予定を管理しよう
-      </p>
       <div class="topbox4">
         <div>
           <span>並び替え:</span>
