@@ -8,6 +8,14 @@ class PlansController < ApplicationController
   end
   
   def show
+    @tweet_url = URI.encode(
+      "http://twitter.com/intent/tweet?original_referer=" +
+      request.url +
+      "&url=" +
+      request.url +
+      "&text=" +
+      "イベント『" + @plan.title + "』に参加予定です。 #plans" 
+    )
   end
   
   def new

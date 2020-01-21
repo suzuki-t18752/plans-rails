@@ -132,6 +132,15 @@ textarea {
         width: 80%;
     }
     
+    .tweetbtn {
+        text-align: center;
+        margin: 20px auto;
+        padding: 5px;
+        width: 100px;
+        display: block;
+        width: 80%;
+    }
+    
     .planbox3 > span {
         display: block;
     }
