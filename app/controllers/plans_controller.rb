@@ -1,5 +1,5 @@
 class PlansController < ApplicationController
-  before_action :require_user_logged_in
+  before_action :require_user_logged_in, only: [:new, :create, :update, :edit, :destroy, :keeps]
   before_action :set_plan, only: [:show, :edit, :update, :destroy]
   helper_method :sort_column, :sort_direction
   
@@ -15,6 +15,16 @@ class PlansController < ApplicationController
       request.url +
       "&text=" +
       "イベント『" + @plan.title + "』に参加予定です。 #plans" 
+    )
+    
+    @gcalendar = URI.encode(
+      'http://www.google.com/calendar/event?' +
+      'action='   + 'TEMPLATE' +
+      '&text='    + @plan.title +
+      '&details=' + @plan.content +
+      '&location='+ request.url +
+      # Rational(32400)はグーグルカレンダーに予定を入れようとした際に9時間ずれるのを直す為
+      '&dates='   + (@plan.startday-Rational(32400)).strftime("%Y%m%dT%H%M%SZ") + '/' + (@plan.endday-Rational(32400)).strftime("%Y%m%dT%H%M%SZ")
     )
   end
   

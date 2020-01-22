@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 2019_11_13_084407) do
 
   create_table "keeps", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "plan_id"
+    t.integer "user_id", null: false
+    t.integer "plan_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["plan_id"], name: "index_keeps_on_plan_id"

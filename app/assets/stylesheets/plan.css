@@ -105,6 +105,17 @@ textarea {
     background-color: salmon;
 }
 
+.tweetbtn {
+    background: white;
+    margin: 20px 5px;
+    padding: 5px;
+    border: 2px solid lightskyblue;
+}
+.tweetbtn:hover {
+    color: white;
+    background-color: lightskyblue;
+}
+
 .planbox3,.planbox4,.planbox5 {
     border-bottom: 2px solid steelblue;
     margin-bottom: 5px;

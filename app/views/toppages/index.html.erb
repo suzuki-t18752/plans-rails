@@ -1,59 +1,24 @@
 <div class="topbox">
   <div class="topbox1">
-    <% if logged_in? %>
-      <%= form_with(scope: :search, url: root_path, method: :get, local: true) do |f| %>
-        <div class="planbox">
-          <div class="planformbox">
-            <p>タイトル</p>
-            <%= f.text_field :title, value: @search_params[:title], class: "planform" %>
-          </div>
-          <div class="planformbox">
-            <p>予定開始日</p>
-            <%= f.date_field :startday_from, value: @search_params[:startday_from], class: "dayform" %> ~ <%= f.date_field :startday_to, value: @search_params[:startday_to], class: "dayform" %>
-          </div>
-          <div class="planformbox">
-            <p>予定終了</p>
-            <%= f.date_field :endday_from, value: @search_params[:endday_from], class: "dayform" %> ~ <%= f.date_field :endday, value: @search_params[:endday_to], class: "dayform" %>
-          </div>
-          <%= f.submit '検索', class: "planbtn" %>
+    <%= form_with(scope: :search, url: root_path, method: :get, local: true) do |f| %>
+      <div class="planbox">
+        <div class="planformbox">
+          <p>タイトル</p>
+          <%= f.text_field :title, value: @search_params[:title], class: "planform" %>
         </div>
-        <% end %>
-      <h3>予定一覧</h3>
-    <% else %>
-      <h1 class="toptitle">welcome to the plans</h1>
-      <p class="topintroduction">
-        いろいろな予定を確認してみよう<br>
-        見逃していたイベント等があるかも？？<br>
-        そして貴方も自分の予定を管理しよう
-      </p>
-      <p>
-        <%= link_to 'ユーザーを作成し利用する', signup_path, class: 'topbtn' %>
-        <%= link_to 'ログイン', login_path, class: 'topbtn' %>
-      </p>
-    <% end %>
-  </div>
-  <div class="topbox2">
-    <% if logged_in? %>
-      <%= render 'plans/plan_style', message: @plan %>
-    <% else %>
-      <div class="topbox4">
-        <div>
-          <span>並び替え:</span>
-          <span><%= sortable "title", "タイトル順" %>-</span>
-          <span><%= sortable "startday", "予定開始日時順" %>-</span>
-          <span><%= sortable "endday", "予定終了日時順" %></span>
+        <div class="planformbox">
+          <p>予定開始日</p>
+          <%= f.date_field :startday_from, value: @search_params[:startday_from], class: "dayform" %> ~ <%= f.date_field :startday_to, value: @search_params[:startday_to], class: "dayform" %>
         </div>
-          
-        <% @plans.each do |plan| %>
-          <p>
-            <span><%= plan.title %></span><br>
-            <span><%= plan.startday.strftime("%Y年%m月%d日 %H時%M分") %>　～</span>
-            <span><%= plan.endday.strftime("%Y年%m月%d日 %H時%M分") %></span>
-          </p>
-        <% end %>
+        <div class="planformbox">
+          <p>予定終了</p>
+          <%= f.date_field :endday_from, value: @search_params[:endday_from], class: "dayform" %> ~ <%= f.date_field :endday, value: @search_params[:endday_to], class: "dayform" %>
+        </div>
+        <%= f.submit '検索', class: "planbtn" %>
       </div>
     <% end %>
-  <%= paginate @plans %>
+    <p>予定一覧</p>
   </div>
-  
+  <%= render 'plans/plan_style', message: @plan %>
+  <%= paginate @plans %>
 </div>
